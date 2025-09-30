@@ -8,17 +8,41 @@ body{
 
 /*==================== Navbar Section ====================*/
 
+
 .navbar{
-  background-color: rgb(255, 255, 255);
-  color: black;
+  position: absolute;
+  right: 0  ;
+  left: 0;
+  top: 0;
+  background-color: linear-gradient(rgba(0, 0, 0, 0.7) , rgba(0, 0, 0, 0.7));
+  text-decoration: none;
+  z-index: 9999;
+  .nav-link ,
+  .logo{
+  color: white;
 }
+}
+
+nav.navbar:has(a.nav-link.active:not([href="#Home"])){
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: white;
+  .nav-link,
+  .logo{
+    color: black;
+  }
+}
+
+
 
 .navbar-nav .nav-link{
     position: relative;
     padding-inline: 0 !important;
     margin-inline: 22px;
     font-size: 14px;
-    color: rgb(0, 0, 0);
+  
     
 }
 .navbar-nav .nav-link.active{
@@ -38,6 +62,8 @@ body{
   width: 100%;
   transition: 500ms;
 }
+
+
 
 .logo{
         
